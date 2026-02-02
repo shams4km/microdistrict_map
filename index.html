@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта микрорайона</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script></head>
+<body>
+    <header>
+        <h1>🗺️ Карта микрорайона</h1>
+        <p class="subtitle">Проект 10 класса</p>
+    </header>
+
+    <div class="container">
+        <div class="map-container" id="map"></div>
+
+        <div class="info-panel">
+            <h2>ℹ️ О проекте</h2>
+            <p>Интерактивная карта нашего микрорайона с отмеченными важными местами.</p>
+
+            <h3>📍 Объекты на карте:</h3>
+            <ul class="places-list">
+                <li>🏫 Школа</li>
+                <li>🌳 Майский сквер</li>
+                <li>🌳 Фестивальный сквер</li>
+                <li>🛒 Магазин</li>
+                <li>🏥 Поликлиника</li>
+                <li>📚 Библиотека</li>
+                <li>🏪 Аптека</li>
+            </ul>
+
+            <div class="controls">
+                <h3>🔧 Управление:</h3>
+                <button onclick="toggleMarkers()" class="btn">Показать/Скрыть маркеры</button>
+                <button onclick="centerMap()" class="btn">Центрировать карту</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Проект выполнен ученицей 10Б класса Марухно Екатерина | 2026 год</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
