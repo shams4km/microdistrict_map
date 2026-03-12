@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Карта микрорайона</title>
+    <title>Карта Фестивального микрорайона</title>
+
+    <!-- Подключение Яндекс.Карт API -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b09e5d3c-af32-452b-9244-6f5611c26524&lang=ru_RU" type="text/javascript"></script>
+
     <link rel="stylesheet" href="style.css">
-
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script></head>
+</head>
 <body>
     <header>
-        <h1>🗺️ Карта микрорайона</h1>
-        <p class="subtitle">Проект 10 класса</p>
+        <h1>🗺️ Карта Фестивального микрорайона</h1>
+        <p class="subtitle">Проект 10 класса | г. Краснодар</p>
     </header>
 
     <div class="container">
@@ -20,17 +21,17 @@
 
         <div class="info-panel">
             <h2>ℹ️ О проекте</h2>
-            <p>Интерактивная карта нашего микрорайона с отмеченными важными местами.</p>
+            <p>Интерактивная карта Фестивального микрорайона города Краснодар с отмеченными важными объектами.</p>
 
             <h3>📍 Объекты на карте:</h3>
             <ul class="places-list">
-                <li>🏫 Школа</li>
-                <li>🌳 Майский сквер</li>
-                <li>🌳 Фестивальный сквер</li>
-                <li>🛒 Магазин</li>
-                <li>🏥 Поликлиника</li>
-                <li>📚 Библиотека</li>
-                <li>🏪 Аптека</li>
+                <li>🏫 Образовательные учреждения </li>
+                <li>🌳 Скверы и парки </li>
+                <li>🛒 Магазины и супермаркеты </li>
+                <li>🏥 Медицинские учреждения </li>
+                <li>📚 Библиотеки </li>
+                <li>🏪 Аптеки </li>
+                <li>🏛️ Административные здания </li>
             </ul>
 
             <div class="controls">
@@ -38,11 +39,46 @@
                 <button onclick="toggleMarkers()" class="btn">Показать/Скрыть маркеры</button>
                 <button onclick="centerMap()" class="btn">Центрировать карту</button>
             </div>
+
+            <div class="legend">
+                <h3>🗺️ Легенда:</h3>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #2196F3;"></span>
+                    <span>Образовательные учреждения</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #4CAF50;"></span>
+                    <span>Парки и скверы</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #FF9800;"></span>
+                    <span>Магазины</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #F44336;"></span>
+                    <span>Медицинские учреждения</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #9C27B0;"></span>
+                    <span>Библиотеки</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #E91E63;"></span>
+                    <span>Аптеки</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #3F51B5;"></span>
+                    <span>Администрация</span>
+                </div>
+            </div>
         </div>
     </div>
 
     <footer>
-        <p>Проект выполнен ученицей 10Б класса Марухно Екатерина | 2026 год</p>
+        <p> Марухно Екатерина Андреевна, 10Б класс, 2026 год</p>
+        <p style="margin-top: 5px; font-size: 0.9rem; color: #666;">
+            Данные карты: © <a href="https://yandex.ru/maps" target="_blank" style="color: #667eea;">Яндекс.Карты</a>
+        </p>
     </footer>
 
     <script src="script.js"></script>
